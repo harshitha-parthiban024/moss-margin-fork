@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Moss and Margins</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<nav class="navbar">
+<div class="container nav-container">
+<div class="nav-logo"><a href="index.html"><img src="logo1.png" style="width: 25px; height: 25px; margin-top: 5px;"> Moss & Margins</a></div>
+<ul class="nav-menu">
+    
+<li><a href="login.html" class="nav-button">Login</a></li>
+<li><a href="signup.html" class="nav-button primary">Sign Up</a></li>
+<li>
+<span id="modeToggle" style="cursor:pointer; font-size:20px;">🌙</span>
+</li>
+</ul>
+</div>
+</nav>
+
+
+<section class="hero">
+<div class="container hero-grid">
+<div>
+
+<h1 style="font-family: 'Playfair Display', serif";>Moss & Margins</h1>
+<p><em>Old Pages, New Hands.</em></p>
+<p>A community-driven platform to thrift books, track reading, and celebrate stories together.</p>
+<a href="signup.html" class="btn primary">Join the Community</a>
+</div>
+<div class="card">
+<h3>Why We Exist</h3>
+<p>Because stories deserve second lives — and readers deserve spaces that feel like home.</p>
+</div></div>
+</section>
+
+
+<section class="section">
+<h2 class="section-title">About Us</h2>
+<div class="container card-grid">
+<div class="card">
+<h3>Sustainable Reading</h3>
+<p>We give pre-loved books a new journey through thoughtful readers.</p>
+</div>
+<div class="card">
+<h3>Track Your Journey</h3>
+<p>Maintain to-be-read lists and personal reviews.</p>
+</div>
+<div class="card">
+<h3>Reader Community</h3>
+<p>Connect with people who read what you love.</p>
+</div>
+</div>
+</section>
+
+
+<footer class="footer">
+<div class="container footer-grid">
+<div>
+<h4>Explore</h4>
+<a href="bestseller.html">Bestsellers</a>
+<a href="tracking.html">Tracking</a>
+<a href="recommendation.html">Recommendation</a></li>
+<a href="groups.html">Group Chat</a></li>
+<a href="wrapped.html">Wrapped</a></li>
+</div>
+<div>
+<h4>Account</h4>
+<a href="login.html">Login</a>
+<a href="signup.html">Sign Up</a>
+</div>
+</div>
+<div class="footer-bottom">© 2024 Moths & Margins</div>
+</footer>
+<script>
+
+const toggle = document.getElementById("modeToggle");
+
+/* Load saved theme */
+
+if(localStorage.getItem("theme") === "dark"){
+document.body.classList.add("dark-mode");
+toggle.textContent = "☀️";
+}
+
+/* Toggle theme */
+
+toggle.addEventListener("click", function(){
+
+document.body.classList.toggle("dark-mode");
+
+if(document.body.classList.contains("dark-mode")){
+localStorage.setItem("theme","dark");
+toggle.textContent = "☀️";
+}else{
+localStorage.setItem("theme","light");
+toggle.textContent = "🌙";
+}
+
+});
+
+</script>
+</body>
+</html>

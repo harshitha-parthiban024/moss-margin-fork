@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fun Game | Moss & Margins</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="container nav-container">
+<div class="nav-logo"><a href="index.html">🦋 Moss & Margins</a></div>
+
+<ul class="nav-menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="bestseller.html">Collection</a></li>
+<li><a href="tracking.html">Tracking</a></li>
+<li><a href="recommendation.html">Recommendation</a></li>
+<li><a href="cart.html">🛒 Checkout</a></li>
+<li><a href="groups.html">Group Chat</a></li>
+<li><a href="wrapped.html">Wrapped</a></li>
+<li><a href="game.html">🎮 Fun Game!</a></li>
+<li><a href="quiz.html">🧠 Book Quiz</a></li>
+<li>
+<span id="modeToggle" style="cursor:pointer; font-size:20px;">🌙</span>
+</li>
+</ul>
+
+</div>
+</nav>
+
+<h1 class="game-title">Find Your Favourite Author 💚</h1>
+<p class="game-sub">Drag the cards and tap the ❤️ when you find your favourite!</p>
+
+<div id="shelf"></div>
+
+<!-- Popup -->
+<div id="popup" class="popup">
+
+<div class="popup-content">
+
+<h2 id="popupTitle"></h2>
+
+<p id="popupText"></p>
+
+<button id="buyBtn">Buy This Book 📚</button>
+
+<br><br>
+
+<button onclick="closePopup()">Continue Exploring</button>
+
+</div>
+
+</div>
+<script src="game.js"></script>
+
+</body>
+</html>

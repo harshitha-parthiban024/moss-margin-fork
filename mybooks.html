@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Books - Moss and Margins</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">🦋 Moss & Margins</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse</a></li>
+                <li><a href="tracking.html">Tracking</a></li>
+                <li><a href="my-books.html">My Books</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1>My Book Library</h1>
+                <p>Manage your personal collection and track your reading progress.</p>
+            </div>
+
+            <!-- Library Statistics -->
+            <div class="library-stats">
+                <div class="stat-card">
+                    <h3>Total Books</h3>
+                    <div class="number">42</div>
+                    <p style="color: var(--text-muted); margin-top: 8px;">in your collection</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Currently Reading</h3>
+                    <div class="number">3</div>
+                    <p style="color: var(--text-muted); margin-top: 8px;">in progress</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Completed</h3>
+                    <div class="number">28</div>
+                    <p style="color: var(--text-muted); margin-top: 8px;">finished</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Pages Read</h3>
+                    <div class="number">8,420</div>
+                    <p style="color: var(--text-muted); margin-top: 8px;">total pages</p>
+                </div>
+            </div>
+
+            <!-- Tabs for Status -->
+            <div class="library-section">
+                <div class="tabs">
+                    <button class="tab-button active" onclick="showLibraryTab(0)">All Books</button>
+                    <button class="tab-button" onclick="showLibraryTab(1)">Reading</button>
+                    <button class="tab-button" onclick="showLibraryTab(2)">Completed</button>
+                    <button class="tab-button" onclick="showLibraryTab(3)">Archived</button>
+                </div>
+
+                <!-- Tab 1: All Books -->
+                <div class="tab-content active">
+                    <div class="item-card">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">Project Hail Mary</h3>
+                                <p class="item-meta">by Andy Weir | Status: Completed | 500 pages</p>
+                            </div>
+                            <span>⭐ 5/5</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                        <p style="color: var(--text-muted); margin: 12px 0; font-size: 14px;">Completed on March 15, 2024</p>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">The Overstory</h3>
+                                <p class="item-meta">by Richard Powers | Status: Currently Reading | 512 pages</p>
+                            </div>
+                            <span>⭐ 4.5/5</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 42%;"></div>
+                        </div>
+                        <p style="color: var(--text-muted); margin: 12px 0; font-size: 14px;">215 of 512 pages (42% complete)</p>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">Educated</h3>
+                                <p class="item-meta">by Tara Westover | Status: Completed | 334 pages</p>
+                            </div>
+                            <span>⭐ 5/5</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                        <p style="color: var(--text-muted); margin: 12px 0; font-size: 14px;">Completed on February 28, 2024</p>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">Tomorrow, and Tomorrow, and Tomorrow</h3>
+                                <p class="item-meta">by Gabrielle Zevin | Status: Currently Reading | 864 pages</p>
+                            </div>
+                            <span>⭐ 4.8/5</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                        <p style="color: var(--text-muted); margin: 12px 0; font-size: 14px;">562 of 864 pages (65% complete)</p>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">The Midnight Library</h3>
+                                <p class="item-meta">by Matt Haig | Status: Completed | 304 pages</p>
+                            </div>
+                            <span>⭐ 4.5/5</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%;"></div>
+                        </div>
+                        <p style="color: var(--text-muted); margin: 12px 0; font-size: 14px;">Completed on January 20, 2024</p>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">The Seven Husbands of Evelyn Hugo</h3>
+                                <p class="item-meta">by Taylor Jenkins Reid | Status: Currently Reading | 400 pages</p>
+                            </div>
+                            <span>⭐ 4.8/5</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 78%;"></div>
+                        </div>
+                        <p style="color: var(--text-muted); margin: 12px 0; font-size: 14px;">312 of 400 pages (78% complete)</p>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Reading -->
+                <div class="tab-content">
+                    <div class="item-card">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">The Overstory</h3>
+                                <p class="item-meta">by Richard Powers | 512 pages</p>
+                            </div>
+                            <span>⭐ 4.5/5</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 42%;"></div>
+                        </div>
+                        <p style="color: var(--text-muted); margin: 12px 0; font-size: 14px;">215 of 512 pages (42% complete) • Started March 1, 2024</p>
+                        <button class="btn btn-primary" style="margin-top: 12px; padding: 8px 16px;">Update Progress</button>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">Tomorrow, and Tomorrow, and Tomorrow</h3>
+                                <p class="item-meta">by Gabrielle Zevin | 864 pages</p>
+                            </div>
+                            <span>⭐ 4.8/5</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                        <p style="color: var(--text-muted); margin: 12px 0; font-size: 14px;">562 of 864 pages (65% complete) • Started January 15, 2024</p>
+                        <button class="btn btn-primary" style="margin-top: 12px; padding: 8px 16px;">Update Progress</button>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">The Seven Husbands of Evelyn Hugo</h3>
+                                <p class="item-meta">by Taylor Jenkins Reid | 400 pages</p>
+                            </div>
+                            <span>⭐ 4.8/5</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 78%;"></div>
+                        </div>
+                        <p style="color: var(--text-muted); margin: 12px 0; font-size: 14px;">312 of 400 pages (78% complete) • Started February 10, 2024</p>
+                        <button class="btn btn-primary" style="margin-top: 12px; padding: 8px 16px;">Update Progress</button>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Completed -->
+                <div class="tab-content">
+                    <div class="item-card">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">Project Hail Mary</h3>
+                                <p class="item-meta">by Andy Weir | 500 pages</p>
+                            </div>
+                            <span>⭐ 5/5</span>
+                        </div>
+                        <p style="color: var(--text-muted); margin: 12px 0; font-size: 14px;">✓ Completed on March 15, 2024 • Read in 18 days</p>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">Educated</h3>
+                                <p class="item-meta">by Tara Westover | 334 pages</p>
+                            </div>
+                            <span>⭐ 5/5</span>
+                        </div>
+                        <p style="color: var(--text-muted); margin: 12px 0; font-size: 14px;">✓ Completed on February 28, 2024 • Read in 22 days</p>
+                    </div>
+
+                    <div class="item-card">
+                        <div class="item-header">
+                            <div>
+                                <h3 class="item-title">The Midnight Library</h3>
+                                <p class="item-meta">by Matt Haig | 304 pages</p>
+                            </div>
+                            <span>⭐ 4.5/5</span>
+                        </div>
+                        <p style="color: var(--text-muted); margin: 12px 0; font-size: 14px;">✓ Completed on January 20, 2024 • Read in 15 days</p>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Archived -->
+                <div class="tab-content">
+                    <p style="color: var(--text-muted); text-align: center; padding: 40px 20px;">No archived books yet. Archive books to remove them from your active library.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Browse</h4>
+                    <ul>
+                        <li><a href="browse.html">All Books</a></li>
+                        <li><a href="browse.html">Categories</a></li>
+                        <li><a href="browse.html">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="tracking.html">Reviews</a></li>
+                        <li><a href="my-books.html">My Books</a></li>
+                        <li><a href="#">Discussion</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Account</h4>
+                    <ul>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="signup.html">Sign Up</a></li>
+                        <li><a href="#">Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Moths & Margins. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showLibraryTab(index) {
+            const contents = document.querySelectorAll('.library-section .tab-content');
+            const buttons = document.querySelectorAll('.library-section .tab-button');
+            
+            contents.forEach((content, i) => {
+                content.classList.remove('active');
+                buttons[i].classList.remove('active');
+            });
+            
+            contents[index].classList.add('active');
+            buttons[index].classList.add('active');
+        }
+    </script>
+</body>
+</html>

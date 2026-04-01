@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookstore Feedback Form</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #dbf2dfee;
+      padding: 20px;
+    }
+
+    .form-container {
+      max-width: 600px;
+      background: #6e9676ee;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 128, 0, 0.15);
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      color: #293830;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 14px;
+      font-weight: bold;
+      color: #20352a;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px 10px;
+      margin-top: 6px;
+      border: 1px solid #a8d5ba;
+      background-color: #b8c6b8;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #4caf50;
+      box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+    }
+
+    .radio-group,
+    .checkbox-group {
+      margin-top: 6px;
+    }
+
+    .radio-group label,
+    .checkbox-group label {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-top: 6px;
+      font-weight: normal;
+      cursor: pointer;
+      color: #2f3c36;
+      line-height: 1.4;
+    }
+
+    .radio-group input,
+    .checkbox-group input {
+      margin: 0;
+      width: auto;
+      transform: translateY(2px);
+      background-color: #c5d4c9;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      background: #344e41;
+      color: rgb(192, 202, 195);
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #75ac84;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="form-container">
+  <h2>Moss&Margins Feedback Form</h2>
+
+  <form id="feedbackForm">
+
+    <!-- Personal Details -->
+    <label>Name *</label>
+    <input type="text" required>
+
+    <label>Email ID *</label>
+    <input type="email" required>
+
+    <label>Phone Number *</label>
+    <input type="tel" required>
+
+    <label>Gender *</label>
+    <div class="radio-group">
+      <label>
+        <input type="radio" name="gender" required>
+        <span>Male</span>
+      </label>
+      <label>
+        <input type="radio" name="gender">
+        <span>Female</span>
+      </label>
+      <label>
+        <input type="radio" name="gender">
+        <span>Prefer Not To Say</span>
+      </label>
+      <label>
+        <input type="radio" name="gender">
+        <span>Other</span>
+      </label>
+    </div>
+
+    <label>Date of Birth *</label>
+    <input type="date" required>
+
+    <!-- Feedback Section -->
+    <label>How did you hear about us?</label>
+    <div class="checkbox-group">
+      <label>
+        <input type="checkbox">
+        <span>Social Media</span>
+      </label>
+      <label>
+        <input type="checkbox">
+        <span>Family</span>
+      </label>
+      <label>
+        <input type="checkbox">
+        <span>Friends</span>
+      </label>
+      <label>
+        <input type="checkbox">
+        <span>Other</span>
+      </label>
+    </div>
+
+    <label>I found the interface easy to navigate.</label>
+    <select>
+      <option>-- Select --</option>
+      <option>Strongly Agree</option>
+      <option>Agree</option>
+      <option>Neutral</option>
+      <option>Disagree</option>
+      <option>Strongly Disagree</option>
+    </select>
+
+    <label>Most of the books are available in the website.</label>
+    <select>
+      <option>-- Select --</option>
+      <option>Strongly Agree</option>
+      <option>Agree</option>
+      <option>Neutral</option>
+      <option>Disagree</option>
+      <option>Strongly Disagree</option>
+    </select>
+
+    <label>What genre of books are lacking in our collection?</label>
+    <textarea rows="4" placeholder="Type here..."></textarea>
+
+    <label>Any other suggestions?</label>
+    <textarea rows="4" placeholder="Type here..."></textarea>
+
+    <button type="submit">Submit Feedback</button>
+  </form>
+</div>
+
+<script>
+    document.getElementById("feedbackForm").addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    alert("Thank you for helping us grow greener 🌱📚");
+
+    window.location.href = "index.html";
+
+});
+</script>
+
+</body>
+</html>

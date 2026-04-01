@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Book Personality Quiz | Moss & Margins</title>
+
+<link rel="stylesheet" href="quiz.css">
+<link rel="stylesheet" href="result.css">
+<link rel="stylesheet" href="style.css">
+
+<!-- React CDN -->
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+
+<!-- ✅ NAVBAR -->
+<nav class="navbar">
+  <div class="container nav-container">
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="logo1.png" style="width: 25px; height: 25px;"> Moss & Margins
+      </a>
+    </div>
+
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bestseller.html">Bestsellers</a></li>
+      <li><a href="tracking.html">Tracking</a></li>
+      <li><a href="recommendation.html">Recommendation</a></li>
+      <li><a href="cart.html">🛒 Checkout</a></li>
+      <li><a href="groups.html">Group Chat</a></li>
+      <li><a href="wrapped.html">Wrapped</a></li>
+      <li><a href="game.html">🎮 Fun Game!</a></li>
+      <li><a href="quiz.html">🧠 Book Quiz</a></li>
+      <li><span id="modeToggle" style="cursor:pointer;">🌙</span></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ✅ TITLE -->
+<h1 class="quiz-title">📚 Discover Your Book Personality</h1>
+
+<!-- ✅ ROOT -->
+<div id="root"></div>
+
+<!-- ✅ REACT CODE -->
+<script type="text/babel">
+
+const { useState } = React;
+
+function QuizApp() {
+
+  const questions = [
+    {
+      question: "What kind of story do you enjoy?",
+      options: ["Romance", "Thriller", "Fantasy", "Self-help"]
+    },
+    {
+      question: "Your ideal weekend?",
+      options: ["Reading in a café", "Solving mysteries", "Imagining worlds", "Planning goals"]
+    },
+    {
+      question: "Pick a vibe:",
+      options: ["Emotional", "Dark", "Magical", "Motivational"]
+    }
+  ];
+
+  const resultsMap = {
+    Romance: {
+      title: "You love Romance ❤️",
+      book: "It Ends With Us",
+      desc: "You enjoy emotional and heartfelt stories."
+    },
+    Thriller: {
+      title: "You love Thrillers 🔍",
+      book: "The Silent Patient",
+      desc: "You enjoy suspense and mystery."
+    },
+    Fantasy: {
+      title: "You love Fantasy 🧙‍♂️",
+      book: "Harry Potter",
+      desc: "You love magical worlds."
+    },
+    "Self-help": {
+      title: "You love Growth 📈",
+      book: "Atomic Habits",
+      desc: "You enjoy self-improvement."
+    }
+  };
+
+  const [currentQ, setCurrentQ] = useState(0);
+  const [answers, setAnswers] = useState([]);
+  const [result, setResult] = useState(null);
+
+  function handleAnswer(option) {
+    const updated = [...answers, option];
+    setAnswers(updated);
+
+    if (currentQ + 1 < questions.length) {
+      setCurrentQ(currentQ + 1);
+    } else {
+      calculateResult(updated);
+    }
+  }
+
+  function calculateResult(ans) {
+    const count = {};
+
+    ans.forEach(a => {
+      count[a] = (count[a] || 0) + 1;
+    });
+
+    let max = Object.keys(count).reduce((a, b) =>
+      count[a] > count[b] ? a : b
+    );
+
+    setResult(resultsMap[max]);
+  }
+
+  function restartQuiz() {
+    setCurrentQ(0);
+    setAnswers([]);
+    setResult(null);
+  }
+
+  return (
+    <div className="quiz-container">
+
+      {!result ? (
+        <div className="question-card">
+          <h2>{questions[currentQ].question}</h2>
+
+          <div className="options">
+            {questions[currentQ].options.map((opt, i) => (
+              <button key={i} onClick={() => handleAnswer(opt)}>
+                {opt}
+              </button>
+            ))}
+          </div>
+        </div>
+      ) : (
+        <div className="result-card">
+          <h2>{result.title}</h2>
+          <p><strong>Recommended Book:</strong> {result.book}</p>
+          <p>{result.desc}</p>
+
+          <button onClick={restartQuiz}>Try Again</button>
+
+          <button onclick="window.location.href='cart.html'" className="buy-btn">
+            Buy This Book
+          </button>
+        </div>
+      )}
+
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<QuizApp />);
+
+</script>
+
+<!-- ✅ DARK MODE SCRIPT -->
+<script>
+const toggle = document.getElementById("modeToggle");
+
+if(localStorage.getItem("theme") === "dark"){
+  document.body.classList.add("dark-mode");
+  toggle.textContent = "☀️";
+}
+
+toggle.addEventListener("click", function(){
+  document.body.classList.toggle("dark-mode");
+
+  if(document.body.classList.contains("dark-mode")){
+    localStorage.setItem("theme","dark");
+    toggle.textContent = "☀️";
+  } else {
+    localStorage.setItem("theme","light");
+    toggle.textContent = "🌙";
+  }
+});
+</script>
+
+</body>
+</html>

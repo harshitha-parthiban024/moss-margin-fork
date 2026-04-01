@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bestsellers</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="container nav-container">
+<div class="nav-logo"><a href="index.html">🦋 Moss & Margins</a></div>
+
+<ul class="nav-menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="bestseller.html">Collections</a></li>
+<li><a href="tracking.html">Tracking</a></li>
+<li><a href="recommendation.html">Recommendation</a></li>
+<li><a href="cart.html">🛒 Checkout</a></li>
+<li><a href="groups.html">Group Chat</a></li>
+<li><a href="wrapped.html">Wrapped</a></li>
+<li><a href="game.html">🎮 Fun Game!</a></li>
+<li><a href="quiz.html">🧠 Book Quiz</a></li>
+<li>
+<span id="modeToggle" style="cursor:pointer; font-size:20px;">🌙</span>
+</li>
+</ul>
+
+</div>
+</nav>
+
+
+<!-- BESTSELLERS -->
+<section class="section">
+
+<h2 class="section-title">Monthly Bestsellers</h2>
+
+<div class="container card-grid">
+
+<div class="card">
+The Midnight Library
+<img src="ml.png" style="width:200px;height:270px;margin-top:20px;">
+<p class="price">
+<span class="old-price">$399</span>
+<span class="new-price">$350</span>
+</p>
+</div>
+
+<div class="card">
+It Ends With Us
+<img src="iewu.png" style="width:200px;height:270px;margin-top:20px;">
+<p class="price">
+<span class="old-price">$349</span>
+<span class="new-price">$300</span>
+</p>
+</div>
+
+<div class="card">
+Atomic Habits
+<img src="ah.png" style="width:220px;height:270px;margin-top:20px;">
+<p class="price">
+<span class="old-price">$450</span>
+<span class="new-price">$400</span>
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- COLLECTIONS -->
+<section class="section">
+
+<h2 class="section-title">Explore Our Collection</h2>
+
+<div class="container collection-grid">
+
+
+<div class="collection-card">
+
+<img src="ml.png">
+
+<h3>The Midnight Library</h3>
+
+<p class="author">Matt Haig</p>
+
+<p class="review">"A beautiful exploration of regrets and possibilities." – Goodreads</p>
+
+<p class="price">₹399</p>
+
+<button onclick="addToCart('The Midnight Library',399)">
+Add to Cart
+</button>
+
+</div>
+
+
+<div class="collection-card">
+
+<img src="iewu.png">
+
+<h3>It Ends With Us</h3>
+
+<p class="author">Colleen Hoover</p>
+
+<p class="review">"A bold story about love and resilience." – NY Times</p>
+
+<p class="price">₹349</p>
+
+<button onclick="addToCart('It Ends With Us',349)">
+Add to Cart
+</button>
+
+</div>
+
+
+<div class="collection-card">
+
+<img src="ah.png">
+
+<h3>Atomic Habits</h3>
+
+<p class="author">James Clear</p>
+
+<p class="review">"Tiny changes create remarkable results." – Forbes</p>
+
+<p class="price">₹450</p>
+
+<button onclick="addToCart('Atomic Habits',450)">
+Add to Cart
+</button>
+
+</div>
+
+
+<div class="collection-card">
+
+<img src="nc.png">
+
+<h3>The Night Circus</h3>
+
+<p class="author">Erin Morgenstern</p>
+
+<p class="review">"Enchanting magical realism." – The Guardian</p>
+
+<p class="price">₹420</p>
+
+<button onclick="addToCart('The Night Circus',420)">
+Add to Cart
+</button>
+
+</div>
+
+<div class="collection-card">
+
+<img src="gl.png">
+
+<h3>The Guest List</h3>
+
+<p class="author">Lucy Foley</p>
+
+<p class="review">"A classic whodunit." – Kate Mosse</p>
+
+<p class="price">₹279</p>
+
+<button onclick="addToCart('The Guest List',420)">
+Add to Cart
+</button>
+
+</div>
+
+
+<div class="collection-card">
+
+<img src="bm.png">
+
+<h3>Better Than The Movies</h3>
+
+<p class="author">Lynn Painter</p>
+
+<p class="review">"A romcom for the ages." – Jennifer Bloom</p>
+
+<p class="price">₹389</p>
+
+<button onclick="addToCart('Better Than The Movies',420)">
+Add to Cart
+</button>
+
+</div>
+
+<div class="collection-card">
+
+<img src="ig.png">
+
+<h3>The Inheritance Games</h3>
+
+<p class="author">Jennifer Lynn Barnes</p>
+
+<p class="review">"Impossible to put down." – Buzzfeed</p>
+
+<p class="price">₹459</p>
+
+<button onclick="addToCart('The Inheritance Games',420)">
+Add to Cart
+</button>
+
+</div>
+
+<div class="collection-card">
+
+<img src="gm.png">
+
+<h3>A Good Girls Guide to Murder</h3>
+
+<p class="author">Holly Jackson</p>
+
+<p class="review">"The perfect nail-biting mystery." – Natasha Preston</p>
+
+<p class="price">₹499</p>
+
+<button onclick="addToCart('A Good Girls Guide to Murder',420)">
+Add to Cart
+</button>
+
+</div>
+</section>
+
+<script>
+
+function addToCart(book, price){
+
+alert(book + " added to cart! 📚");
+
+}
+
+</script>
+
+</body>
+</html>
+</body>
+</html>

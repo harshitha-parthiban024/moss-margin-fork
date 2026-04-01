@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recommendation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+<div class="container nav-container">
+<div class="nav-logo"><a href="index.html">🦋 Moss & Margins</a></div>
+<ul class="nav-menu">
+<li><a href="index.html">Home</a></li>
+<li><a href="bestseller.html">Collection</a></li>
+<li><a href="tracking.html">Tracking</a></li>
+<li><a href="recommendation.html">Recommendation</a></li>
+<li><a href="cart.html">🛒 Checkout</a></li>
+<li><a href="groups.html">Group Chat</a></li>
+<li><a href="wrapped.html">Wrapped</a></li>
+<li><a href="game.html">🎮 Fun Game!</a></li>
+<li><a href="quiz.html">🧠 Book Quiz</a></li>
+<li>
+<span id="modeToggle" style="cursor:pointer; font-size:20px;">🌙</span>
+</li>
+</ul>
+</div>
+</nav>
+
+<section class="section">
+<h2 class="section-title">Recommended For You</h2>
+<div class="recommendation-card">
+    <div class="recommendation-content">
+        <h3>The Book Thief</h3>
+        <p class="recommendation-reason">
+            A historic, atmospheric read perfect to draw you into tumultuous landscape of Nazi Germany.
+        </p>
+    </div>
+
+    <div class="recommendation-image">
+        <img src="bt.png" alt="The Night Circus book cover">
+    </div>
+</div>
+
+<div class="recommendation-card">
+    <div class="recommendation-content">
+        <h3>The Circe</h3>
+        <p class="recommendation-reason">
+            A magical, atmospheric read perfect if you enjoy lyrical storytelling.
+        </p>
+    </div>
+
+    <div class="recommendation-image">
+        <img src="cr.png" alt="The Night Circus book cover">
+    </div>
+</div>
+
+<div class="recommendation-card">
+    <div class="recommendation-content">
+        <h3>The Alchemist</h3>
+        <p class="recommendation-reason">
+            A driven, philosophical read perfect if you enjoy motivational storytelling.
+        </p>
+    </div>
+
+    <div class="recommendation-image">
+        <img src="al.png" alt="The Night Circus book cover">
+    </div>
+</div>
+
+</section>
+
+
+</body>
+<script>
+
+const toggle = document.getElementById("modeToggle");
+
+/* Load saved theme */
+
+if(localStorage.getItem("theme") === "dark"){
+document.body.classList.add("dark-mode");
+toggle.textContent = "☀️";
+}
+
+/* Toggle theme */
+
+toggle.addEventListener("click", function(){
+
+document.body.classList.toggle("dark-mode");
+
+if(document.body.classList.contains("dark-mode")){
+localStorage.setItem("theme","dark");
+toggle.textContent = "☀️";
+}else{
+localStorage.setItem("theme","light");
+toggle.textContent = "🌙";
+}
+
+});
+
+</script>
+
+</body>
+</html>
